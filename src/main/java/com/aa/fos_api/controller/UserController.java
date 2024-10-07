@@ -1,5 +1,6 @@
 package com.aa.fos_api.controller;
 
+import com.aa.fos_api.model.User;
 import com.aa.fos_api.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -16,7 +17,7 @@ public class UserController {
     private UserService userService;
     @Operation(summary = "Fetch all users")
     @GetMapping ("/users")
-    public List<String> getUserInfo(){
+    public List<User> getUserInfo(){
         return userService.getUserInfo();
     }
 
